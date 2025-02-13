@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title> Heramb Warke Portfolio Website</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/ionicons.min.css">
+    
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+
+
+
+<style>
+
+/*======================================
+//--//-->   ABOUT
+======================================*/
+
+.about-mf .box-shadow-full {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.about-mf .about-img {
+  margin-bottom: 2rem;
+}
+
+.about-mf .about-img img {
+  margin-left: 10px;
+}
+
+
+.skill-mf .progress {
+  /* background-color: #cde1f8; */
+  margin: .5rem 0 1.2rem 0;
+  border-radius: 0;
+  height: .7rem;
+}
+
+.skill-mf .progress .progress-bar {
+  height: .7rem;
+  background-color: #ffbd39;
+}
+
+
+/* Animation styles */
+#typing-animation {
+  position: relative;
+  font-size: 30px;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 3s steps(20, end) infinite;
+}
+
+#typing-animation:before {
+  content: "";
+  /* position: absolute; */
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: #ccc;
+  animation: typing-cursor 0.5s ease-in-out infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes typing-cursor {
+  from {
+    width: 5px;
+  }
+  to {
+    width: 0;
+  }
+}
+
+
+/* project image zoom effect */
+
+.zoom-effect {
+  overflow: hidden;
+  transition: transform 0.3s ease-out;
+}
+
+.zoom-effect:hover {
+  transform: scale(1.1);
+}
+
+
+</style>
+
+
+  </head>
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+	  
+	  
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
+	    <div class="container">
+	      <a class="navbar-brand" href="index.html">W. Heramb</a>
+	      <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button>
+
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav nav ml-auto">
+	          <li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
+	          <li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
+	          <li class="nav-item"><a href="#resume-section" class="nav-link"><span>Resume</span></a></li>
+	          <li class="nav-item"><a href="#project-section" class="nav-link"><span>Projects</span></a></li>
+			  <li class="nav-item"><a href="https://medium.com/@herambwarke25" class="nav-link"><span>Blogs</span></a></li>
+	          <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
+	        </ul>
+	      </div>
+	    </div>
+	  </nav>
+	  <section id="home-section" class="hero">
+		  <div class="home-slider  owl-carousel">
+	       <div class="slider-item ">
+	      	<div class="overlay"></div>
+	         <div class="container">
+	          <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
+	          	<div class="one-third js-fullheight order-md-last img" style="background-image:url(images/me1.png);">
+	          	 <div class="overlay"></div>
+	          	</div>
+		          <div class="one-forth d-flex  align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+		          	<div class="text">
+		          		<span class="subheading">Hello!</span>
+			            <h1 class="mb-4 mt-3">I'm <span>Heramb Warke</span></h1>
+
+						<!-- Element to contain animated typing -->
+						<span id="typing-animation"></span>
+
+						<script>
+
+						// Initialize the typing animation
+						const typingAnimationElement = document.getElementById('typing-animation');
+
+						// Create an array of typing text
+						const typingTexts = [
+						'Nexialist  ',
+						'Synthesist  ',
+						'Cogineer   ',
+						'Polymath   ',
+						'ArchiTech   ',
+						'Futurarch   ',
+						];
+
+						// Create a function to display the typing animation for a given text
+						function playTypingAnimation(text) {
+						// Loop through each character and add it to the element
+						for (let i = 0; i < text.length; i++) {
+							setTimeout(() => {
+							typingAnimationElement.textContent += text[i];
+							}, i * 200); // Increase the delay to slow down the typing animation
+						}
+
+						// Once the animation is complete, reset the text and start over
+						setTimeout(() => {
+							typingAnimationElement.textContent = '';
+							playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
+						}, text.length * 200);
+						}
+
+						// Start the typing animation loop
+						playTypingAnimation(typingTexts[0]);
+
+						</script>
+
+						<br>
+						<br>
+			            <h2>A Third year UG Student at IIT Kharagpur</h2>
+						<!-- <h2 class="d-flex" style="margin-bottom: 0">With over 5 years of experience</h2> -->
+						<!-- <br> -->
+			            <p><a href="https://www.linkedin.com/in/heramb-warke-7721bb25a/" class="btn btn-white btn-outline-white py-3 px-4">linkedin</a> 
+							<a href="https://drive.google.com/drive/folders/11tU50k4xhA_A79exyW8F8iBuhuDYB2ba?usp=sharing" class="btn btn-primary py-3 px-4">My works</a>
+							<a href="https://www.researchgate.net/profile/Heramb-Warke" class="btn btn-white btn-outline-white py-3 px-4">Research</a></p>
+		            </div>
+		          </div>
+	        	</div>
+	        </div>
+	      </div>
+		</div>
+    </section>
+
+
+
+    <section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
+    	<div class="container">
+			<div class="row">
+				<div class="row d-flex align-items-stretch">
+				<!-- <div class="row d-flex"> -->
+					<div class="col-md-6 col-lg-5 d-flex">
+						<div class="img-about img d-flex align-items-stretch">
+							<div class="overlay">
+								<div class="row">
+									<div class="col-sm-6 col-md-5">
+									  <div class="about-img">
+										<img src="images/me4.png" class="img-fluid rounded b-shadow-a" alt="">
+									  </div>
+									</div>
+									<!-- Details next to profile image -->
+									<div class="col-sm-6 col-md-7">
+									  <div class="about-info">
+										<p><span class="title-s">Name: </span> <span>W. Heramb</span></p>
+										<p><span class="title-s">College: </span> <span>IIT Kharagpur</span></p>
+										<p><span class="title-s">Experience: </span> <span>1.5+ years</span></p>
+										<p><span class="title-s">Address: </span> <span>RP Hall, IIT Kharagpur </span></p>
+									  </div>
+									</div>
+								  </div>
+
+								<div class="skill-mf">
+									<p class="title-s">Skills</p>
+									<span>SQL</span> <span class="pull-right">95%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 90%;" aria-valuenow="90" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>PYTHON</span> <span class="pull-right">85%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>Data Visualization</span> <span class="pull-right">90%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+
+									<span>Business Intelligence</span> <span class="pull-right">95%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 95%" aria-valuenow="95" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>Advanced Excel</span> <span class="pull-right">85%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 95%" aria-valuenow="95" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>Machine Learning</span> <span class="pull-right">80%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+
+									<span>Web Development</span> <span class="pull-right">75%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+
+									<span></span>Project Management<span class="pull-right">90%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>UI/UX Design</span> <span class="pull-right">75%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>								
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<div class="col-md-6 col-lg-7 pl-lg-5 pb-5">
+						<div class="row justify-content-start pb-3">
+							<div class="col-md-12 heading-section ftco-animate">
+								
+								<h1 class="big">About</h1>
+								<h2 class="mb-4">About Me</h2>
+								<br>
+								<h6 class="textyellow">"Jack of all trades but master of none, but oftentimes better than master of one." </h6><p class="textalignment"> Hello, I’m Heramb, a third-year undergraduate student at the Indian Institute of Technology, Kharagpur. My journey spans diverse fields — from developing data-driven strategies at Maruti Suzuki Arena and optimizing service processes to researching sustainable architecture and Green Economics, working in the apparel e-commer and manufacturing industry, and contributing to the Space Technology Cell. I thrive as a generalist, embracing challenges across domains rather than confining myself to a single pursuit. Whether it’s analyzing business data, crafting design solutions, strategizing for competitions, or executing complex projects, I believe adaptability often outshines narrow specialization. I'd love to explore potential synergies and opportunities together.
+								
+								</p>
+								<ul class="about-info mt-4 px-md-0 px-2">
+									<li class="d-flex"><span>Profile:</span> <span>Product management &amp; Business strategy</span></li>
+									<li class="d-flex"><span>Cerifications:</span> <span>IBM Full Stack Software Development Professional Course (10 Courses), & Yale University Financial Markets (Honors).</span></li>
+									<li class="d-flex"><span>BI Tools:</span> <span>Microsoft Power BI, Looker, Alteryx &amp; Tableau</span></li>
+									<li class="d-flex"><span>Other Tools:</span> <span>JIRA, Figma, Belsamiq, Notion, VS Code, Git, JIRA, Google Analytics & SEO, SKetchUp, Revit, StaadPro, AutoCAD</span></li>
+									<li class="d-flex"><span>Language:</span> <span>English, Hindi, Marathi, Gujrati</span></li>
+									<li class="d-flex"><span>Interests:</span> <span>Traveling, Reading, Blogging, Dramatics and Music, Teaching</span></li>
+									
+								</ul>
+							</div>
+						</div>
+
+
+						<div class="counter-wrap ftco-animate d-flex mt-md-3">
+							<div class="text">
+								<!-- <p class="mb-4">
+									<span class="number" data-number="30">0</span> <span>+</span>
+									<span>&nbsp; Projects completed</span>
+								</p> -->
+								<p><a href="https://www.linkedin.com/in/heramb-warke-7721bb25a/" class="btn btn-primary py-3 px-3">LinkedIn</a></p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+    </section>
+
+
+
+	
+    <section class="ftco-section ftco-no-pb" id="resume-section">
+    	<div class="container">
+    		<div class="row justify-content-center pb-5">
+          <div class="col-md-10 heading-section text-center ftco-animate">
+          	<h1 class="big big-2">Resume</h1>
+            <h2 class="mb-4">Resume</h2>
+            <p class="textalignment">Strategic Product enthusiast with proven track record in Business strategy and data-driven solutions. Demonstrated expertise in developing strategic roadmaps, optimizing operational efficiency, and leading cross-functional teams, combining analytical prowess with business acumen to drive impactful product innovations.</p>
+          </div>
+        </div>
+
+		<div class="row">
+			<h1 class="big-4">Experience</h1>
+			<div class="underline"></div>
+		</div>
+		<br>
+		
+		<div class="row">
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">May'24 - July'24</span>
+						<h2> Summer Intern (CEO Office) </h2>
+						<span class="position">Maruti Suzuki Arena</span>
+						<p class="mt-4">Developed a KPI tool leveraging BI tools to optimize technician efficiency and workflow, saving 35+ hours monthly, improving key metrics. 
+							<ul>
+								<li class="textalignment">Developed an in-house KPI tool using BI tools, for optimizing technician efficiency and workflow process, resulted in saving 35+ hours monthly.</li>
+								<li class="textalignment">Implemented 7 KPIs like average service time, Technician utilization rate, first-time fix-rate, repair quality index for continuous improvement.</li>
+								<li class="textalignment">Reduced average service time by 20 mins/service, increased technician utilization rate from 3 to 3.5 repairs/day, raised first-time fix-rate by 5%.</li>
+								<li class="textalignment">Collaborated with senior management and team of 3 for strategizing local servicing business, ending with earning a letter of recommendation.</li>
+							</ul>
+						</p>
+					</div>
+
+				</div>
+
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">Feb'23 : Jun'24</span>
+						<h2>Undergraduate Student Researcher</h2>
+						<span class="position">IIT Kharagpur</span>
+						<p class="mt-4">Researched the Sustainability and Economics of Green Infrastructure in India, by analyzing 20+ case studies, 27+ variables and 50+ papers.
+							<ul>
+								<li class="textalignment">Was onboarded to conduct the research on Sustainability and Economics of Green Infrastructure in India, by analyzing total 20+ case studies.</li>
+								<li class="textalignment">Total screened and studied 50+ research papers on topics like Green Buildings, Sustainable Development, Finance in Construction Industry</li>
+								<li class="textalignment">Analyzed 20+ case studies and 50+ research papers to identify key trends in sustainable green infrastructure practices and Policies</li>
+								<li class="textalignment">Prepared and delivered 50+ page detailed literature review and 27+ variables analysis, which led me receiving the letter of recommendation.</li>
+							</ul>
+						</p>
+					</div>
+
+				</div>
+			</div>
+
+		<br>
+		<div class="row">
+			<h1 class="big-4">Positions of Responsibilities</h1>
+			<div class="underline"></div>
+		</div>
+		<br>
+		
+		<div class="row">
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">Feb'23-Present</span>
+						<h2>Head, Sponsorship, Marketing & GL</h2>
+						<span class="position">NSSC'24</span> 
+						<p> </p>
+							<ul>
+								<li class="textalignment">Total Onboarded 37+ sponsors and partners by managing a team of 4 Sub-heads, with total 300% increase in amount raised for our fest.</li>
+								<li class="textalignment">Executed comprehensive publicity and marketing initiatives, successfully increasing the festival's social media reach by an impressive 300%.</li>
+								<li class="textalignment">Pitched and negotiated for our title sponsor during sub-head tenure, which let to increase in the total sponsorship amount by 25%.</li>
+								<li class="textalignment">Organized our main celebrity talk shows for the 2 YouTubers with over 12 million subscribers, resulting in increase of 20% registrations.</li>
+								<li class="textalignment">Manged multiple important portfolios single handedly with managing the team of 45+ subheads.</li>
+							</ul>
+						</p>
+					</div>
+
+				</div>
+
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">Feb'23-Present</span>
+						<h2>Senior Executive</h2>
+						<span class="position">spAts, Space Technology Cell</span> 
+						<p> </p>
+							<ul>
+								<li class="textalignment">Spearheaded a comprehensive research initiative for my junior batch, meticulously managing a team of 50 members organized into 12 groups.</li>
+								<li class="textalignment">This ambitious project produced 12 review papers/articles and book chapters, with a primary focus on astrophysics, astronomy, cosmology, and astro-economics. The exceptional quality of our work led to some papers being accepted for publication in the prestigious American Scientific Research Journal For Engineering, Technology and Sciences. This led to initiation of spAts Research Journal resulting in getting 3x projects.</li>
+								<li class="textalignment">Arranged 20+ guest lectures of distinguished personalities for the KGP community and corporates.</li>
+							</ul>
+						</p>
+					</div>
+
+				</div>
+			</div>
+		
+			<div class="row">
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">Jul'24-Present</span>
+						<h2>Department Representative</h2>
+						<span class="position">UG Council, IIT Kharagpur</span> 
+						<p class="textalignment">Department Representative for 250+ students at the Institute Undergraduate Students Council for the 2024-2025 academic year.</p>
+					</div>
+
+				</div>
+
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">Oct'24-Present</span>
+						<h2>Senior Executive</h2>
+						<span class="position">Product Club</span> 
+						<p class="textalignment"> Engaged in workshops and knowledge sessions as a Senior Executive Member of the Product Club, a community for product management enthusiasts. </p>
+					</div>
+
+				</div>
+			</div>
+
+		<br>
+
+		<div class="row">
+			<h1 class="big-4">Education</h1>
+			<div class="underline"></div>
+		</div>
+		<br>
+		<div class="row">
+			<div class="col-md-6">
+				<div class="resume-wrap ftco-animate">
+					<span class="date">2022-2027</span>
+					<h2>Indian Institute of Technology, Kharagpur</h2>
+					<p class="mt-4">Majors: Architecture and Regional Planning <br> Micro-specialisations: Artificial Intelligence & Entrepreneurship and Innovation</p>
+				</div>
+			</div>
+
+			<div class="col-md-6">
+				<div class="resume-wrap ftco-animate">
+					<span class="date">2020-2022</span>
+					<h2>Chattrapati Shivaji Maharaj Junior Science College, Jalgaon</h2>
+					<p class="mt-4">HSC Board <br> Physics, Chemistry, Maths, Computer Science 1, Computer Science 2, English</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="row justify-content-center mt-5">
+			<div class="col-md-6 text-center ftco-animate">
+				<p><a href="https://drive.google.com/drive/folders/1BTndfacbsqt7ocfDEzamGvJcNSLf_WHy" class="btn btn-primary py-4 px-5">Download CV</a></p>
+			</div>
+		</div>
+	</div>
+		
+    </section>
+
+   
+
+    <section class="ftco-section" id="project-section">
+      <div class="container">
+        <div class="row justify-content-center mb-5 pb-5">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+            <h1 class="big big-2">Projects</h1>
+            <h2 class="mb-4">Projects</h2>
+            <p>Below is a comprehensive overview of my key projects and Skills, highlighting analytical insights and innovative solutions delivered across various domains.</p>
+          </div>
+        </div>
+        <div class="row d-flex">
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry justify-content-end">
+              <a href="https://github.com/Heramb-KGP/Health-Analysis-Dashboard" class="block-20 zoom-effect" style="background-image: url('images/projbg1.png');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+
+                <h3 class="heading"><a href="https://github.com/Heramb-KGP/Health-Analysis-Dashboard">Healthcare Analysis and Patient Care Optimization</a></h3>
+                <p class="textalignment">Analyzed 10K+ healthcare records, optimizing $43.5M spending and improving care distribution with dashboards. Developed a patient care system tracking 5 insurers and 3.5K test results</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry justify-content-end">
+              <a href="https://github.com/Heramb-KGP/Spotify-Data-Analysis-and-Visualization" class="block-20 zoom-effect" style="background-image: url('images/projbg2.png');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+
+                <h3 class="heading"><a href="https://github.com/Heramb-KGP/Spotify-Data-Analysis-and-Visualization">Spotify Data Visualization</a></h3>
+                <p class="textalignment"><br>Developed an interactive Power BI dashboard for Spotify data analysis, tracking total streams, top artists, track statistics, and streaming trends over time for data-driven insights.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry">
+              <a href="https://github.com/Heramb-KGP/DATA-ANALYTICS-IN-BUILDING-SCIENCE" class="block-20 zoom-effect" style="background-image: url('images/projbg3.png');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+
+                <h3 class="heading"><a href="https://github.com/Heramb-KGP/DATA-ANALYTICS-IN-BUILDING-SCIENCE">Time Series Forecasting in Building Sciences</a></h3>
+                <p class="textalignment">Analyzed and cleaned 40K+ rows of one-year building data collected at 15-minute intervals. Merged unclean datasets and conducted air quality and energy efficiency analysis using VBA and advanced Excel.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+	<br>
+		<!-- added justify-content-center to center align the last two projects -->
+		<div class="row d-flex justify-content-center">  
+			<div class="col-md-4 d-flex ftco-animate">
+				<div class="blog-entry justify-content-end">
+				<a href="https://docs.google.com/document/d/1_bW4dojS9-rqDwPe1z_pM8f1DMiiud3Z/edit?usp=sharing&ouid=109040871267606246815&rtpof=true&sd=true" class="block-20 zoom-effect" style="background-image: url('images/projbg4.jpg');">
+				</a>
+				<div class="text mt-3 float-right d-block">
+  
+				  <h3 class="heading"><a href="https://docs.google.com/document/d/1_bW4dojS9-rqDwPe1z_pM8f1DMiiud3Z/edit?usp=sharing&ouid=109040871267606246815&rtpof=true&sd=true">Italian Architecture and Well-Being of Human Beings</a></h3>
+				  <p class="textalignment">Analysis of Italian green architecture to understand 35% energy savings, 15% air quality improvement, and increased biodiversity through innovative design and case studies.</p>
+				</div>
+			  </div>
+			</div>
+			<div class="col-md-4 d-flex ftco-animate">
+				<div class="blog-entry justify-content-end">
+				<a href="https://github.com/Heramb-KGP/whatsApp-chat-Analysis" class="block-20 zoom-effect" style="background-image: url('images/prjbg5.jpeg');">
+				</a>
+				<div class="text mt-3 float-right d-block">
+  
+				  <h3 class="heading"><a href="https://github.com/Heramb-KGP/whatsApp-chat-Analysis"> MLPowered WhatsApp Conversation Analysis Tool </a></h3>
+				  <p class="textalignment">Developed a WhatsApp chat analysis tool using machine learning techniques to extract insights, visualize patterns, and generate user-specific statistics from conversation data.
+				</p>
+				</div>
+			  </div>
+			</div>
+		 </div>
+	  </div>
+    </section>
+
+	<section class="ftco-section ftco-no-pt ftco-no-pb ftco-counter img" id="section-counter">
+      <div class="container">
+		<div class="row d-md-flex align-items-center">
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="1 ">0</strong>
+                <span>H-Index</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="13 ">0</strong>
+                <span>Publications </span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="30 ">0</strong>
+                <span>Projects</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="15">0</strong>
+                <span>Associations</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+	
+	  <div class="ftco-section ftco-hireme img margin-top" style="background-image: url(images/pexels-craig-adderley-1563356.jpg)">
+			<!-- <div class="container"> -->
+				<div class="row justify-content-center">
+					<div class="col-md-7 ftco-animate text-center">
+						<h2>More projects on<span> Github & Drive </span> </h2>
+						<div class="heading"> <h4> Driven problem-solver with a passion for innovation, leadership, & a knack for turning data-driven insights into actionable strategies. </h4>
+						<br>
+						<div class="row justify-content-center">
+						<p><a href="https://github.com/Heramb-KGP" class="btn btn-primary py-3 px-5">GitHub</a></p>
+
+						<p><a href="https://drive.google.com/drive/folders/11tU50k4xhA_A79exyW8F8iBuhuDYB2ba" class="btn btn-primary py-3 px-5">Drive</a></p>
+					</div>
+						</div>
+					</div>
+				</div>
+			<!-- </div> -->
+		</div>
+	</section>
+
+
+
+    <section class="ftco-section contact-section ftco-no-pb" id="contact-section">
+      <div class="container">
+      	<div class="row justify-content-center mb-5 pb-3">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+            <h1 class="big big-2">Contact</h1>
+            <h2 class="mb-4">Contact Me</h2>
+            <p>Below are the details to reach out to me!</p>
+          </div>
+        </div>
+
+        <div class="row d-flex contact-info mb-5">
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-map-signs"></span>
+          		</div>
+          		<h3 class="mb-4">Address</h3>
+	            <p>RP Hall, IIT Kharagpur, India</p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-phone2"></span>
+          		</div>
+          		<h3 class="mb-4">Contact Number</h3>
+	            <p><a href="tel://9834458336">+91 9834458336</a></p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-paper-plane"></span>
+          		</div>
+          		<h3 class="mb-4">Email Address</h3>
+	            <p><a href="mailto:info@yoursite.com">herambwarke25@gmail.com</a></p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-globe"></span>
+          		</div>
+          		<h3 class="mb-4">Download Resume</h3>
+	            <p><a href="#">resumelink</a></p>
+	          </div>
+          </div>
+
+		  <div class="container">
+			<br>
+			<br>
+			<div class="row justify-content-center">
+				<div class="col-md-7 ftco-animate text-center">
+					<h2>Have a<span> Question?  </span> <a href="https://docs.google.com/forms/d/e/1FAIpQLSfiik2T5yN4SFKoHEZDCOFyNtnvwjtPJhEibOrlskOhDATHYg/viewform?usp=dialog" class="btn btn-primary py-3 px-5">Click Here</a> </h2>
+				</div>
+			</div>
+				<br>
+					<ul class="ftco-footer-social list-unstyled d-flex justify-content-center align-items-center mb-0">
+					  <li class="ftco-animate normal-txt">Find me on  </li>
+					  <li class="ftco-animate"><a href="https://www.linkedin.com/in/heramb-warke-7721bb25a/"><span class="icon-linkedin"></span></a></li>  
+				      <li class="ftco-animate"><a href="https://www.instagram.com/rumbactious_treat?igsh=MTJ5dTZycTFqbGsybg=="><span class="icon-instagram"></span></a></li>
+			
+					</ul>
+				<br>
+		   </div>
+   </div>
+ </section>
+
+
+ 
+	
+    <footer class="ftco-footer ftco-section">
+		<div class="container">
+		  <div class="row">
+			<div class="col-md-12 text-center">
+  
+			  <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+	Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart color-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+	<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+			</div>
+		  </div>
+		</div>
+	  </footer>
+
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/scrollax.min.js"></script>
+  
+  <script src="js/main.js"></script>
+    
+  </body>
+</html>
